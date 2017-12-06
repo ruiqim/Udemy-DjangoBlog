@@ -100,7 +100,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+STATIC_URL = '/static/'
+MEDIA_URL = '/pics/'
+MEDIA_ROOT = BASE_DIR
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 

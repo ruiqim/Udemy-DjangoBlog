@@ -5,5 +5,12 @@
 {% for post in posts.all %}
 
   {{post.title}}
-
+  <br />
+  {{post.pub_date_format}}
+  <br />
+  <img src="{{ post.image.url }}" />
+  <br />
+  {{post.summary}}
+  <br />
+  <br />
 {% endfor %}
