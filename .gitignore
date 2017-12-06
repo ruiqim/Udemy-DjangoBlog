@@ -3,6 +3,7 @@
 *.pot
 *.py[co]
 __pycache__
+migrations/
 MANIFEST
 dist/
 docs/_build/
@@ -70,7 +71,7 @@ coverage.xml
 *.mo
 *.pot
 
-# Django 
+# Django
 *.log
 
 # Sphinx documentation
@@ -81,4 +82,3 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
-
