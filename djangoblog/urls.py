@@ -16,12 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
-from posts import views
+import posts.views
 from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.home),
-    url(r'^posts/(?P<post_id>[0-9]+)/$', views.post_details,name="post_detail"),
+    url(r'^$', posts.views.home, name="home"),
+    url(r'^posts/(?P<post_id>[0-9]+)/$', posts.views.post_details,name="post_detail"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
