@@ -39,24 +39,24 @@
         </div>
       </div>
     </nav>
+    <div class="container">
+      <h1>Home Page</h1>
 
-    <h1>Home Page</h1>
+      <h2>Latest Posts</h2>
+      <hr />
+      {% for post in posts.all %}
 
-    <h2>Latest Posts</h2>
-
-    {% for post in posts.all %}
-
-      <a href="{% url 'post_detail' post.id%}">{{post.title}}</a>
-      <br />
-      {{post.pub_date_format}}
-      <br />
-      <img src="{{ post.image.url }}" />
-      <br />
-      {{post.summary}}
-      <br />
-      <br />
-    {% endfor %}
-
+        <a href="{% url 'post_detail' post.id%}"><h3>{{post.title}}</h3></a>
+        <h4><span class="glyphicon glyphicon-time" aria-hidden="true"> </span>
+        {{post.pub_date_format}}</h4>
+        <br />
+        <img src="{{ post.image.url }}" class="img-responsive center-block" style="max-height:150px;"/>
+        <br />
+        <p>{{post.summary}}</p>
+        <br />
+        <br />
+      {% endfor %}
+    </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
